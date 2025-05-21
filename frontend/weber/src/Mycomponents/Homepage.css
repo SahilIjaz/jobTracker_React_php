@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #030303;
+  color: #e0f2f1;
+}
+
+.homepage {
+  width: 100%;
+}
+
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  gap: 2rem;
+  background: linear-gradient(to right, #030303, #00695c);
+}
+
+.left-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.left-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #80cbc4;
+}
+
+.cta-button {
+  background-color: #00bfa6;
+  color: #030303;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #26c6da;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-visual {
+  max-width: 70%;
+  height: auto;
+  border-radius: 15%;
+}
+
+.features {
+  padding: 3rem 6rem;
+  background-color: #0a0a0a;
+}
+
+.features h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00bfa6;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background-color: #004d40;
+  padding: 1.5rem;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #e0f2f1;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(38, 198, 218, 0.3);
+}
+
+.testimonials,
+.blog-preview {
+  padding: 3rem 6rem;
+}
+
+.testimonial-card,
+.blog-post {
+  background-color: #1a1a1a;
+  padding: 2rem;
+  border-left: 5px solid #00bfa6;
+  margin-top: 1rem;
+  border-radius: 12px;
+  color: #e0f2f1;
+}
+
+.footer {
+  background-color: #004d40;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: #e0f2f1;
+  font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+  color: #4dd0e1;
+}

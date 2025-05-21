@@ -1,0 +1,75 @@
+/* Background image setup */
+.job-form-bg {
+  background-image: url('./assets/aj.avif');
+  background-size: cover;
+  background-position: center;
+  backdrop-filter: blur(8px);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px;
+}
+
+/* Form container styling */
+.form-container {
+  background-color: rgba(224, 247, 247, 0.95); /* tealish with transparency */
+  padding: 35px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #004d4d;
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+
+/* Labels and inputs */
+form label {
+  display: block;
+  margin-bottom: 12px;
+  color: #004d4d;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #b2dfdb;
+  border-radius: 6px;
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #008080;
+  outline: none;
+}
+
+/* Button */
+button {
+  background-color: #008080;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 18px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #006666;
+}

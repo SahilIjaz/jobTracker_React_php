@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.job-form-page {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+              url('./assets/job-post.png') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.job-form-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 600px;
+}
+
+
+.form-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #1e1e2f;
+  margin-bottom: 2rem;
+}
+
+.job-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #ccc;
+  padding: 0.5rem 0;
+  transition: all 0.3s ease;
+}
+
+.input-group input,
+.input-group textarea {
+  flex: 1;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 0.95rem;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.input-group input:focus + label,
+.input-group textarea:focus + label,
+.input-group input:not(:placeholder-shown) + label,
+.input-group textarea:not(:placeholder-shown) + label {
+  top: -0.7rem;
+  left: 1.5rem;
+  font-size: 0.8rem;
+  color: #1e1e2f;
+  background-color: #f4f9fc;
+  padding: 0 0.25rem;
+}
+.select-group select {
+  width: 100%;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border: none;
+  background: transparent;
+  font-size: 1rem;
+  color: #333;
+  appearance: none;
+  outline: none;
+}
+
+.select-group {
+  position: relative;
+}
+
+.select-group::after {
+  content: "▼";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+}
+
+.select-group select:invalid {
+  color: #999;
+}
+
+.icon {
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  color: #61dafb;
+}
+
+.textarea-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.post-btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #1e1e2f;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.post-btn:hover {
+  background-color: #61dafb;
+  color: #1e1e2f;
+}

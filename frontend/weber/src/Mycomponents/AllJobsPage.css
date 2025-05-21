@@ -1,0 +1,249 @@
+/* Colors */
+:root {
+  --dark-gray: #2e2e2e;
+  --teal: #008080;
+  --light-gray: #d3d3d3;
+  --white: #ffffff;
+  --hover-shadow: rgba(0, 128, 128, 0.3);
+}
+.apply-button {
+  margin-top: 16px;
+  background-color: var(--teal);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.apply-button:hover {
+  background-color: #00a3a3;
+  transform: translateY(-2px);
+}
+
+.apply-button:active {
+  transform: scale(0.97);
+}
+
+.all-jobs-page {
+  max-width: auto;
+  margin: 40px auto;
+  padding: 25px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--dark-gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px var(--hover-shadow);
+  color: var(--light-gray);
+
+  max-height: 700px;
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--teal) var(--dark-gray);
+}
+
+.all-jobs-page::-webkit-scrollbar {
+  width: 8px;
+}
+
+.all-jobs-page::-webkit-scrollbar-track {
+  background: var(--dark-gray);
+  border-radius: 10px;
+}
+
+.all-jobs-page::-webkit-scrollbar-thumb {
+  background-color: var(--teal);
+  border-radius: 10px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--teal);
+  margin-bottom: 25px;
+  letter-spacing: 1.1px;
+  animation: fadeInDown 0.8s ease forwards;
+}
+
+/* Filter container */
+.filter-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+}
+
+.filter-container label {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.filter-container select {
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3a3a3a;
+  color: var(--white);
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-container select:hover,
+.filter-container select:focus {
+  background-color: var(--teal);
+  outline: none;
+}
+
+/* Job list */
+.job-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Job card */
+.job-card {
+  background-color: #3a3a3a;
+  border-radius: 12px;
+  padding: 22px 28px;
+  box-shadow: 0 3px 8px rgba(0, 128, 128, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.job-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px var(--hover-shadow);
+}
+
+.job-card h3 {
+  margin: 0 0 14px 0;
+  color: var(--white);
+  font-weight: 700;
+  font-size: 24px;
+  position: relative;
+  padding-left: 30px;
+}
+
+.job-card h3::before {
+  content: "💼";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.job-card p {
+  margin: 8px 0;
+  font-size: 16px;
+  color: var(--light-gray);
+}
+
+.job-card p strong {
+  color: var(--teal);
+}
+
+.status {
+  margin-top: 16px;
+  font-weight: 700;
+  padding: 9px 18px;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  width: fit-content;
+  color: var(--white);
+  user-select: none;
+  animation: pulse 2s infinite;
+}
+
+.status::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.status.under-review {
+  background-color: var(--teal);
+}
+
+.status.under-review::before {
+  content: "⏳";
+  animation: spin 2s linear infinite;
+}
+
+.status.interview-scheduled {
+  background-color: #26a69a;
+}
+
+.status.interview-scheduled::before {
+  content: "📅";
+}
+
+.status.rejected {
+  background-color: #7a7a7a;
+}
+
+.status.rejected::before {
+  content: "❌";
+}
+
+.no-jobs {
+  text-align: center;
+  font-style: italic;
+  color: var(--light-gray);
+  margin-top: 50px;
+  font-size: 18px;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 5px var(--teal);
+  }
+  50% {
+    box-shadow: 0 0 15px var(--teal);
+  }
+}
